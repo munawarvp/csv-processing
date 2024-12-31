@@ -49,6 +49,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+
+    'project01.custom_middleware.RateLimitMiddleware',
 ]
 
 ROOT_URLCONF = 'project01.urls'
@@ -70,6 +72,8 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'project01.wsgi.application'
+
+AUTH_USER_MODEL = 'main.User'
 
 
 # Database

@@ -1,0 +1,1 @@
+{"success":true,"message":"Data uploaded successfully.","data":{"records_saved":7,"records_rejected":1,"validation_errors":[{"email":["Email already exists."]}]}}

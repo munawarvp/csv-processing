@@ -1,5 +1,6 @@
 import re
 
+from main.models import User
 from rest_framework import serializers
 
 class FileUploadSerializer(serializers.Serializer):
@@ -22,6 +23,10 @@ class UserSerializer(serializers.Serializer):
         email_regex = r'^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$'
         if not re.match(email_regex, value):
             raise serializers.ValidationError("Invalid email format.")
+        
+        # check email is unique
+        if User.objects.filter(email=value).exists():
+            raise serializers.ValidationError("Email already exists.")
         return value
 
     def validate_age(self, value):
