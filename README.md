@@ -1,5 +1,8 @@
 # Getting Started with project
 
+The project consit of functionality to extract user data from csv file and insert in to User table. We can expect a summarised result as response total records saved. total records rejected and error messages of rejected records.
+Apart from that also implemented a custom middleware for rate limiting the request based on client ip address. This is to protect the backend server from attacks like spamming multiple request to the server. Through this i have demonstrated how a custom middleware is created and its set up.
+
 ### `cd csv-processing`
 
 if environment setup is needed, run:
