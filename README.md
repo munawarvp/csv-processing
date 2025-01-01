@@ -30,4 +30,4 @@ For Unit testing:
 
 Sample input file and sample output file are attached in the project root directory.
 
-For handling large csv input data we can optimize the process by using ###`Celery` and run the task in background. Am aware of the performance, Since this is a demonstration we can keep it simple. On production level definetly we will work along with performance based structure.
+For handling large csv input data we can optimize the process by using `Celery` and run the task in background. Am aware of the performance, Since this is a demonstration we can keep it simple. On production level definetly we will work along with performance based structure.
